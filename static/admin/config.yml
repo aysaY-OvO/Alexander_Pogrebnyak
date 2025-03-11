@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main # Или другая основная ветка проекта
+
+media_folder: "static/images/uploads" # Папка для хранения медиафайлов
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
