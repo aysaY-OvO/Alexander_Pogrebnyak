@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main # Или другая основная ветка проекта
+  branch: master # Или другая основная ветка проекта
 
 media_folder: "static/images/uploads" # Папка для хранения медиафайлов
 public_folder: "/images/uploads"
