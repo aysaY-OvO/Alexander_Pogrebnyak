@@ -5,23 +5,47 @@ const config: GatsbyConfig = {
     title: `Alex_Pogrebnyak`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
-  // If you use VSCode you can also use the GraphQL plugin
-  // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
-  plugins: ["gatsby-plugin-netlify-cms", "gatsby-plugin-sitemap", {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      "icon": "src/images/icon.png"
-    }
-  }, "gatsby-transformer-remark", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+  plugins: [
+    // Плагин для работы с Netlify CMS
+    "gatsby-plugin-netlify-cms",
+
+    // Плагин для создания карты сайта
+    "gatsby-plugin-sitemap",
+
+    // Плагин для манифеста сайта (иконка приложения)
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: "src/images/icon.png"
+      }
     },
-    __key: "pages"
-  }]
+
+    // Плагин для работы с изображениями
+    "gatsby-plugin-image",
+
+    // Плагин для работы с файлами (загрузка изображений)
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: "images",  // название каталога для изображений
+        path: `${__dirname}/src/images/`,  // путь к папке с изображениями
+      },
+    },
+
+    // Плагин для трансформации markdown контента
+    "gatsby-transformer-remark",
+
+    // Другие файлы (если необходимо использовать их в проекте)
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: "pages",  // название каталога для страниц
+        path: `${__dirname}/src/pages/`,  // путь к папке с страницами
+      },
+      __key: "pages"
+    },
+  ],
 };
 
 export default config;
