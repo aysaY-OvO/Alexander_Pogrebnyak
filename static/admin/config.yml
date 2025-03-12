@@ -1,17 +1,17 @@
 backend:
   name: git-gateway
-  branch: master # Или другая основная ветка проекта
+  branch: master
 
-media_folder: "static/images/uploads" # Папка для хранения медиафайлов
-public_folder: "/images/uploads"
+media_folder: "static/images/main"
+public_foldeer: "/images/main"
 
 collections:
-  - name: "blog"
-    label: "Blog Posts"
-    folder: "content/blog"
-    create: true
-    slug: "{{slug}}"
+  - name: "main"
+    label: "Main Screen"
+    delete: false
+    files:
+      - label: "Main GIF"
+        name: "main_gif"
+        file: "content/main.json"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "GIF Image", name: "gif", widget: "image" }
