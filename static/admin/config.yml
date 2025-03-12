@@ -13,5 +13,5 @@ collections:
       - label: "Main GIF"
         name: "main_gif"
         file: "content/main.json"
-    fields:
-      - { label: "GIF Image", name: "gif", widget: "image" }
+        fields:
+          - { label: "GIF Image", name: "gif", widget: "image" }
