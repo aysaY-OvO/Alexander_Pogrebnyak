@@ -29,10 +29,13 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        "name": "images",
-        "path": `${__dirname}/src/images/`,
+        "name": "uploads",
+        "path": `./static/uploads`,
       },
     },
+    "gatsby-plugin-image",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
