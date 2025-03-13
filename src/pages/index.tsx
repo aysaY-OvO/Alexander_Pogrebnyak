@@ -5,18 +5,20 @@ import { graphql, useStaticQuery } from "gatsby";
 const IndexPage: React.FC<PageProps> = () => {
   const gif = useStaticQuery(graphql`
       query {
-        file(relativePath: {eq: "main/main.gif"}) {
-          publicURL
-        }
+        allDataJson {
+            nodes {
+              gif
+            }
+          }
       }
     `)
 
-    if (!gif.file) {
+    if (!gif.allDataJson) {
       return <p>Image not found</p>
     }
 
   return (
-    <img src={gif.file.publicURL} width={1024} height={1024} alt=""/>
+    <img src={gif.allDataJson.nodes[0].gif} width={1024} height={1024} alt=""/>
   )
 }
 
