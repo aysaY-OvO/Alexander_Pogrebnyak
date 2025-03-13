@@ -6,12 +6,14 @@ const IndexPage: React.FC<PageProps> = () => {
   const gif = useStaticQuery(graphql`
       query {
         allDataJson {
-            nodes {
-              gif
-            }
+          nodes {
+            gif
           }
+        }
       }
     `)
+
+    console.log(gif.allDataJson.nodes[0].gif);
 
     if (!gif.allDataJson) {
       return <p>Image not found</p>

@@ -3,7 +3,7 @@ backend:
   branch: master
 
 media_folder: "src/images/main"
-public_folder: "/static"
+public_folder: "/images/main"
 
 collections:
   - name: "main"
