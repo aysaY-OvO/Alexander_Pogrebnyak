@@ -1,29 +1,20 @@
-import * as React from "react"
-import type { HeadFC, PageProps } from "gatsby"
-import { graphql, useStaticQuery } from "gatsby";
+import React from "react";
+import MainPage from "./main/main";
+import { HeadFC } from "gatsby";
+import { theme } from '../theme/index';
+import { globalStyles } from "../theme/globalStyles";
+import { CssBaseline, ThemeProvider } from "@mui/material";
 
-const IndexPage: React.FC<PageProps> = () => {
-  const gif = useStaticQuery(graphql`
-      query {
-        allDataJson {
-          nodes {
-            gif
-          }
-        }
-      }
-    `)
-
-    console.log(gif.allDataJson.nodes[0].gif);
-
-    if (!gif.allDataJson) {
-      return <p>Image not found</p>
-    }
-
+const IndexPage: React.FC = () => {
   return (
-    <img src={gif.allDataJson.nodes[0].gif} width={1024} height={1024} alt=""/>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      {globalStyles}
+      <MainPage />
+    </ThemeProvider>
   )
 }
 
-export default IndexPage
+export default IndexPage;
 
 export const Head: HeadFC = () => <title>Home Page</title>
