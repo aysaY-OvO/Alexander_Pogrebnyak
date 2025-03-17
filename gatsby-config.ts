@@ -46,14 +46,7 @@ const config: GatsbyConfig = {
       options: {
         custom: {
           families: ["Akony", "Montserrat"],
-          urls: [
-              "/fonts/Akony.woff2",
-              "/fonts/Akony.woff",
-              "/fonts/Montserrat-Regular.woff2",
-              "/fonts/Montserrat-Regular.woff",
-              "/fonts/Montserrat-Bold.woff2",
-              "/fonts/Montserrat-Bold.woff",
-            ]
+          urls: ["/fonts/fonts.css"]
         },
       },
     },

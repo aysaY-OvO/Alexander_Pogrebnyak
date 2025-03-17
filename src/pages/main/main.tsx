@@ -19,7 +19,7 @@ const MainPage: React.FC = () => {
 
   return (
     <>
-      <Typography variant='h1'>Hello World</Typography>
+      <Typography variant='body1'>Hello World</Typography>
       <img src={gif.allDataJson.nodes[0].gif} width={1024} height={1024} alt=""/>
     </>
   )

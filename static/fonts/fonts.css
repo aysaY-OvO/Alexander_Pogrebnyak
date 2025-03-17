@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Akony';
+  font-weight: 400;
+  src: url('./Akony.woff2') format('woff2'),
+    url('./Akony.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  src: url('./Montserrat-Regular.woff2') format('woff2'),
+    url('./Montserrat-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  src: url('./Montserrat-Bold.woff2') format('woff2'),
+    url('./Montserrat-Bold.woff') format('woff');
+}
