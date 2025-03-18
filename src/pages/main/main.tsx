@@ -1,6 +1,8 @@
 import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby";
-import { Typography } from "@mui/material";
+import Header from "../../components/header/header";
+import { StyledContainer } from "../../styled/layout/container";
+import Image from "../../styled/ui/image";
 
 const MainPage: React.FC = () => {
   const gif = useStaticQuery(graphql`
@@ -18,10 +20,10 @@ const MainPage: React.FC = () => {
     }
 
   return (
-    <>
-      <Typography variant='body1'>Hello World</Typography>
-      <img src={gif.allDataJson.nodes[0].gif} width={1024} height={1024} alt=""/>
-    </>
+    <StyledContainer>
+      <Header indexPage={true} />
+      <Image src={gif.allDataJson.nodes[0].gif} width={1024} height={1024} alt=""/>
+    </StyledContainer>
   )
 }
 
