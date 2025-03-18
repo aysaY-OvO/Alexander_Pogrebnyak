@@ -18,11 +18,6 @@ export const globalStyles = (
         textDecoration: "none",
         color: "inherit",
       },
-      ".custom-container": {
-        maxWidth: "1200px",
-        margin: "0 auto",
-        padding: "20px",
-      },
     }}
   />
 );

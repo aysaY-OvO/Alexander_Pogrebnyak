@@ -1,8 +1,9 @@
 import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby";
 import Header from "../../components/header/header";
-import { StyledContainer } from "../../styled/layout/container";
 import Image from "../../styled/ui/image";
+import { StyledContainer } from "../../styled/layout/container";
+import { ImageWrapper } from "./styled";
 
 const MainPage: React.FC = () => {
   const gif = useStaticQuery(graphql`
@@ -22,7 +23,9 @@ const MainPage: React.FC = () => {
   return (
     <StyledContainer>
       <Header indexPage={true} />
-      <Image src={gif.allDataJson.nodes[0].gif} width={1024} height={1024} alt=""/>
+      <ImageWrapper>
+        <Image src={gif.allDataJson.nodes[0].gif} width={1024} height={1024} alt=""/>
+      </ImageWrapper>
     </StyledContainer>
   )
 }

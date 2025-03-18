@@ -1,7 +1,7 @@
 import { styled } from "@mui/material";
 
 export const StyledHeader = styled('header')`
-  margin: 39px 0;
+  padding: 39px 0;
   display: flex;
   justify-content: space-between;
   width: 100%;
