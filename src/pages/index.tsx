@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "@mui/material";
-import MainPage from "./main/main";
+import MainPage from "./main";
 import { HeadFC } from "gatsby";
 import { theme } from '../theme/index';
 import { globalStyles } from "../theme/globalStyles";

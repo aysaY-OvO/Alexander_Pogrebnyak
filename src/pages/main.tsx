@@ -1,11 +1,26 @@
 import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby";
-import Header from "../../components/header/header";
-import Image from "../../styled/ui/image";
-import { StyledContainer } from "../../styled/layout/container";
-import { ImageWrapper } from "./styled";
+import Header from "../components/header/header";
+import Image from "../styled/ui/image";
+import { StyledContainer } from "../styled/layout/container";
+import { styled } from "@mui/material";
 
 const MainPage: React.FC = () => {
+  const ImageWrapper = styled('div')`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    user-select: none;
+
+    img {
+      pointer-events: none;
+      max-height: 600px;
+      max-width: 600px;
+    }
+  `;
+
+
   const gif = useStaticQuery(graphql`
       query {
         allDataJson {
