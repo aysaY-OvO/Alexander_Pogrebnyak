@@ -1,10 +1,13 @@
 import React from "react";
 import logo from '../../images/svg/logo.svg';
 import { Link } from "gatsby";
+import LangButton from "../langButton/langButton";
 import {
   StyledHeader,
   Navigation,
-  UserNav
+  UserNav,
+  UserNavItem,
+  LangSwitchers
 } from './styled';
 
 interface HeaderProps {
@@ -24,33 +27,33 @@ const Header: React.FC<HeaderProps> = ({ indexPage }) => {
         }
       </div>
       <Navigation>
-        <div className="lang-switch">
-          <button>RU</button>
-          <button>EN</button>
-        </div>
+        <LangSwitchers>
+          <LangButton active={true} lang='RU' />
+          <LangButton lang="EN"/>
+        </LangSwitchers>
 
         <nav>
           <UserNav>
-            <li>
+            <UserNavItem>
               <Link to='/about'>
                 об авторе
               </Link>
-            </li>
-            <li>
+            </UserNavItem>
+            <UserNavItem>
               <Link to='/sound'>
                 саунд арт
               </Link>
-            </li>
-            <li>
+            </UserNavItem>
+            <UserNavItem>
               <Link to='/media'>
                 медиа арт
               </Link>
-            </li>
-            <li>
+            </UserNavItem>
+            <UserNavItem>
               <Link to='/photo'>
                 фото
               </Link>
-            </li>
+            </UserNavItem>
           </UserNav>
         </nav>
       </Navigation>
