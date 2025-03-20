@@ -5,7 +5,6 @@ import { graphql, useStaticQuery } from "gatsby";
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
 import Image from "../components/ui/image";
-import { StyledContainer } from "../styled/utils/container";
 import { styled } from "@mui/material";
 
 const MainPage: React.FC = () => {
@@ -24,29 +23,31 @@ const MainPage: React.FC = () => {
   `;
 
 
-  const gif = useStaticQuery(graphql`
+  const response = useStaticQuery(graphql`
       query {
         allDataJson {
           nodes {
-            gif
+            main {
+              gif
+            }
           }
         }
       }
     `)
 
-    if (!gif.allDataJson) {
+    const gif = response.allDataJson.nodes[0].main.gif
+
+    if (!response.allDataJson) {
       return <p>Image not found</p>
     }
 
   return (
     <Layout>
-      <StyledContainer>
-        <Header indexPage={true} />
+      <Header indexPage={true} />
         <ImageWrapper>
-          <Image src={gif.allDataJson.nodes[0].gif} width={1024} height={1024} alt=""/>
+          <Image src={gif} width={1024} height={1024} alt=""/>
         </ImageWrapper>
         <Footer />
-      </StyledContainer>
     </Layout>
   )
 }

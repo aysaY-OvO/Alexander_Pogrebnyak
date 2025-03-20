@@ -10,9 +10,16 @@ export const globalStyles = (
         padding: 0,
         boxSizing: "border-box",
       },
+      "#___gatsby": {
+        height: "100%"
+      },
+      "#gatsby-focus-wrapper": {
+        height: "100%"
+      },
       body: {
         backgroundColor: palette.customColors.black,
         color: "#fff",
+        height: "100vh",
       },
       a: {
         textDecoration: "none",

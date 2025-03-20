@@ -7,11 +7,24 @@ public_folder: "/uploads"
 
 collections:
   - name: "main"
-    label: "Main Screen"
+    label: "Главный экран"
     delete: false
     files:
-      - label: "Main GIF"
+      - label: "Главное изображение"
         name: "main_gif"
         file: "data/main.json"
         fields:
-          - { label: "GIF Image", name: "gif", widget: "image" }
+          - { name: "gif", label: "Изображение", widget: "image" }
+
+  - name: "about"
+    label: "Об авторе"
+    delete: false
+    create: true
+    files:
+      - label: "Контент"
+        name: "about"
+        file: "data/main.json"
+        fields:
+          - { name: "photo", label: "Фото", widget: "image" }
+          - { name: "title", label: "Заголовок", widget: "text" }
+          - { name: "text", label: "Текст", widget: "text" }
