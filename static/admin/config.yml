@@ -11,8 +11,8 @@ collections:
     delete: false
     files:
       - label: "Главное изображение"
-        name: "main_gif"
         file: "data/main.json"
+        name: "main_gif"
         fields:
           - { name: "gif", label: "Изображение", widget: "image" }
 
@@ -22,9 +22,14 @@ collections:
     create: true
     files:
       - label: "Контент"
-        name: "about"
         file: "data/main.json"
+        name: "about"
         fields:
           - { name: "photo", label: "Фото", widget: "image" }
           - { name: "title", label: "Заголовок", widget: "text" }
-          - { name: "text", label: "Текст", widget: "text" }
+          # - { name: "text", label: "Текст", widget: "list", fields: [{ name: paragraph, label: "Первый абзац", widget: "text" }]}
+          - name: "text"
+            label: "Текст"
+            widget: "list"
+            fields:
+              - { name: "paragraph", label: "Абзац", widget: "string" }
