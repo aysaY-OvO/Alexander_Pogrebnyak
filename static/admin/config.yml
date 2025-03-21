@@ -4,32 +4,37 @@ backend:
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
+local_backend: true
 
 collections:
   - name: "main"
-    label: "Главный экран"
-    delete: false
+    label: "Главная страница"
     files:
-      - label: "Главное изображение"
+      - name: "main"
         file: "data/main.json"
-        name: "main_gif"
+        label: "Главная"
         fields:
-          - { name: "gif", label: "Изображение", widget: "image" }
+          - name: "main"
+            label: "Главная"
+            widget: "object"
+            fields:
+              - { name: "gif", label: "GIF-изображение", widget: "image", required: true }
 
   - name: "about"
-    label: "Об авторе"
-    delete: false
-    create: true
+    label: "Страница 'Об авторе'"
     files:
-      - label: "Контент"
+      - name: "about"
         file: "data/main.json"
-        name: "about"
+        label: "Об авторе"
         fields:
-          - { name: "photo", label: "Фото", widget: "image" }
-          - { name: "title", label: "Заголовок", widget: "text" }
-          # - { name: "text", label: "Текст", widget: "list", fields: [{ name: paragraph, label: "Первый абзац", widget: "text" }]}
-          - name: "text"
-            label: "Текст"
-            widget: "list"
+          - name: "about"
+            label: "Об авторе"
+            widget: "object"
             fields:
-              - { name: "paragraph", label: "Абзац", widget: "string" }
+              - { name: "photo", label: "Фото автора", widget: "image", required: true }
+              - { name: "title", label: "Заголовок", widget: "string" }
+              - name: "text"
+                label: "Текст"
+                widget: "list"
+                fields:
+                  - { name: "paragraph", label: "Параграф", widget: "text" }
