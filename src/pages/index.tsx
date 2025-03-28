@@ -1,6 +1,6 @@
 import * as React from "react"
 import { HeadFC } from "gatsby";
-import { Layout } from "../components/layout/layout";
+import Layout from "../components/layout/layout";
 import { graphql, useStaticQuery } from "gatsby";
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
@@ -23,7 +23,7 @@ const MainPage: React.FC = () => {
   `;
 
 
-  const response = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
       query {
         allDataJson {
           nodes {
@@ -35,19 +35,19 @@ const MainPage: React.FC = () => {
       }
     `)
 
-    const gif = response.allDataJson.nodes[0].main.gif
+    const gif = data.allDataJson.nodes[0].main.gif
 
-    if (!response.allDataJson) {
+    if (!data.allDataJson) {
       return <p>Image not found</p>
     }
 
   return (
     <Layout>
-      <Header indexPage={true} />
-        <ImageWrapper>
-          <Image src={gif} width={1024} height={1024} alt=""/>
-        </ImageWrapper>
-        <Footer />
+      <Header indexPage={true} activePage='' />
+      <ImageWrapper>
+        <Image src={gif} width={1024} height={1024} alt=""/>
+      </ImageWrapper>
+      <Footer />
     </Layout>
   )
 }

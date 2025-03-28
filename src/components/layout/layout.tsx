@@ -8,7 +8,7 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   const Wrapper = styled('div')`
     display: flex;
     flex-direction: column;
@@ -28,3 +28,5 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
     </ThemeProvider>
   )
 };
+
+export default Layout;
