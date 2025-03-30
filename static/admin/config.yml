@@ -11,7 +11,7 @@ collections:
     label: "Главная страница"
     files:
       - name: "main"
-        file: "data/main.json"
+        file: "data/data.json"
         label: "Главная"
         fields:
           - name: "main"
@@ -24,7 +24,7 @@ collections:
     label: "Страница 'Об авторе'"
     files:
       - name: "about"
-        file: "data/main.json"
+        file: "data/data.json"
         label: "Об авторе"
         fields:
           - name: "about"

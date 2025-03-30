@@ -41,8 +41,8 @@ const AboutPage: React.FC = () => {
         </ImageWrapper>
         <TextWrapper>
           <StyledTitle variant='h1'>{title}</StyledTitle>
-          {text?.map((item: string) => {
-            return <StyledText variant="body1">{item}</StyledText>
+          {text?.map((item: string, id: number) => {
+            return <StyledText key={id} variant="body1">{item}</StyledText>
           })}
         </TextWrapper>
       </StyledMain>
