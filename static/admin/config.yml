@@ -28,7 +28,6 @@ collections:
         label: "Об авторе"
         fields:
           - name: "about"
-            label: "Об авторе"
             widget: "object"
             fields:
               - { name: "photo", label: "Фото автора", widget: "image", required: true }
@@ -38,3 +37,19 @@ collections:
                 widget: "list"
                 fields:
                   - { name: "paragraph", label: "Параграф", widget: "text" }
+
+  # - name: "sound-art"
+  #   label: "Саунд арт"
+  #   files:
+  #     - name: "sound-art"
+  #       file: "data/sound.json"
+  #       label: "Саунд арт"
+  #       fields:
+  #         - name: "sound-art"
+  #           widget: "object"
+  #           fields:
+  #             - { name: "cover", label: "Обложка", widget: "image", required: true }
+  #             - { name: "title", label: "Название трека", widget: "string", required: true }
+  #             - { name: "event", label: "Мероприятие", widget: "string" }
+  #             - { name: "year", label: "Год создания", widget: "string" }
+  #             - { name: "description", label: "Описание композиции", widget: "text" }

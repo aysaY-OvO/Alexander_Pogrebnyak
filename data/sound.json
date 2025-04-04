@@ -1,0 +1,31 @@
+{
+  [
+    {
+      "src": "/audio/Soviet apartment final.mp3",
+      "cover": "/uploads/music/cover.jpg",
+      "badge": "uploads/music/badge.jpg",
+      "title": "Soviet apartment final",
+      "event": "Мероприятие",
+      "year": "Год создания",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero facilis quaerat voluptas minus aliquid quia, enim recusandae. Omnis, consequatur quasi commodi perferendis accusamus deleniti recusandae adipisci? Eos odio dolor facere. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed vero obcaecati possimus repudiandae, velit molestias enim voluptatum sapiente temporibus consequatur aut exercitationem. Eveniet sunt doloribus, obcaecati quaerat iste ipsum quae?"
+    },
+    {
+      "src": "/audio/Polifems dream_final.mp3",
+      "cover": "/uploads/music/cover.jpg",
+      "badge": "uploads/music/badge.jpg",
+      "title": "Polifems Dream Final",
+      "event": "Мероприятие",
+      "year": "Год создания",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero facilis quaerat voluptas minus aliquid quia, enim recusandae. Omnis, consequatur quasi commodi perferendis accusamus deleniti recusandae adipisci? Eos odio dolor facere. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed vero obcaecati possimus repudiandae, velit molestias enim voluptatum sapiente temporibus consequatur aut exercitationem. Eveniet sunt doloribus, obcaecati quaerat iste ipsum quae?"
+    },
+    {
+      "src": "/audio/Son Varya Schuka.mp3",
+      "cover": "/uploads/music/cover.jpg",
+      "badge": "uploads/music/badge.jpg",
+      "title": "Son Varya Schuka",
+      "event": "Мероприятие",
+      "year": "Год создания",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero facilis quaerat voluptas minus aliquid quia, enim recusandae. Omnis, consequatur quasi commodi perferendis accusamus deleniti recusandae adipisci? Eos odio dolor facere. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed vero obcaecati possimus repudiandae, velit molestias enim voluptatum sapiente temporibus consequatur aut exercitationem. Eveniet sunt doloribus, obcaecati quaerat iste ipsum quae?"
+    }
+  ]
+}
